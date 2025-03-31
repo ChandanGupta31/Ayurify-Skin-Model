@@ -32,6 +32,11 @@ interpreter.allocate_tensors()
 input_details = interpreter.get_input_details()
 output_details = interpreter.get_output_details()
 
+
+@app.get("/")
+def home():
+    return {"message": "Hello FastAPI"}
+
 def preprocess_image(image):
     image = image.resize((224, 224))
     image = np.array(image) / 255.0 
