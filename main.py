@@ -15,6 +15,11 @@ OUTPUT_PATH_EYE = "eye_model.tflite"
 
 FILE_ID_SKIN = "1TjkTrHpDJFdvfCortA8w5xjy9K6Xai04"
 OUTPUT_PATH_SKIN = "skin_model.tflite"
+FILE_ID_EYE = "1nvWsYFZ-aHRFEFOp_kMOJE9bUpjHihe3"
+OUTPUT_PATH_EYE = "eye_model.tflite"
+
+FILE_ID_SKIN = "1TjkTrHpDJFdvfCortA8w5xjy9K6Xai04"
+OUTPUT_PATH_SKIN = "skin_model.tflite"
 
 # Function to download the model
 def download_model():
