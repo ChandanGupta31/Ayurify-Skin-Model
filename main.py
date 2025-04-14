@@ -33,7 +33,7 @@ input_details = interpreter.get_input_details()
 output_details = interpreter.get_output_details()
 
 
-@app.route('/')
+@app.get('/')
 def home():
     return {"message": "Hello FastAPI"}
 
@@ -42,7 +42,7 @@ def preprocess_image(image):
     image = np.array(image) / 255.0 
     image = np.expand_dims(image, axis=0).astype(np.float32)
     return image
-@app.route("/predict", methods=['POST'])
+@app.post("/predict")
 async def predict(file: UploadFile = File(...)):
     image = Image.open(io.BytesIO(await file.read()))
     input_data = preprocess_image(image)
