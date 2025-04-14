@@ -36,7 +36,7 @@ def download_model():
 download_model()
 
 
-interpreter_eye = tflite.interpreter_eye(model_path="eye_model.tflite")
+interpreter_eye = tflite.Interpreter(model_path="eye_model.tflite")
 interpreter_eye.allocate_tensors()
 input_details_eye = interpreter_eye.get_input_details()
 output_details_eye = interpreter_eye.get_output_details()
