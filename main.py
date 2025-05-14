@@ -10,8 +10,8 @@ app = FastAPI()
 
 # Load TFLite model
 
-FILE_ID = "1aqFgeQ120le-yp6zUZKhpoHK6dx8maaR"
-OUTPUT_PATH = "skin_model_v2.tflite"
+FILE_ID = "16OLPodFHG0E-Uhgxt7Cr1AV4aV-Tg7Lj"
+OUTPUT_PATH = "skin_model_v3.tflite"
 
 # Function to download the model
 def download_model():
@@ -26,7 +26,7 @@ def download_model():
 download_model()
 
 
-interpreter = tflite.Interpreter(model_path="skin_model_v2.tflite")
+interpreter = tflite.Interpreter(model_path="skin_model_v3.tflite")
 interpreter.allocate_tensors()
 
 input_details = interpreter.get_input_details()
